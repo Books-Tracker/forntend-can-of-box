@@ -1,0 +1,11 @@
+.card{
+  margin: auto;
+  text-align: center;
+}
+a{
+  color:#fff;
+}
+
+a:hover{
+  color:darkgrey;
+}
