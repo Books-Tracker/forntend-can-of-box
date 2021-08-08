@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withAuth0 } from "@auth0/auth0-react";
+import Content from "./Content";
 
 class Profile extends Component {
   render() {
@@ -9,6 +10,7 @@ class Profile extends Component {
       <div>
         <img src={user.picture} alt={user.name} />
         <p>Hello {user.name}</p>
+        <Content />
 
       </div>
 
