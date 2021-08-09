@@ -19,4 +19,3 @@ class Profile extends Component {
 }
 
 export default withAuth0(Profile);
-/* <img src={user.picture} alt={user.name}/> */

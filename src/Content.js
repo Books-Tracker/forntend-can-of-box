@@ -26,12 +26,11 @@ export class Content extends Component {
           url: "/verify-token",
         };
 
-        axios(config)
-          .then((axiosResponse) => {
-            this.setState({
-              user: axiosResponse.data,
-            });
-          })
+        axios(config).then((axiosResponse) => {
+          this.setState({
+            user: axiosResponse.data,
+          });
+        });
       })
       .catch((error) => alert(error));
   };
