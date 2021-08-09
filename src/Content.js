@@ -39,7 +39,7 @@ export class Content extends Component {
   render() {
     return (
       <div>
-        <p>Component Loaded!</p>
+        <p>Component</p>
         {this.state.user.nickname && (
           <p>Data from Backend: {this.state.user.nickname}</p>
         )}
