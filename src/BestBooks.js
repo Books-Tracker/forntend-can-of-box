@@ -13,6 +13,7 @@ export class MyFavoriteBooks extends React.Component {
     this.state = {
       bookData: [],
       booksStatus: false,
+      ShowAddedBooks:false,
     };
   }
 
@@ -34,6 +35,10 @@ export class MyFavoriteBooks extends React.Component {
         alert(error.message);
       });
   };
+
+  handeladdedBooks = () => {
+    this.setState({handeladdedBooks: !this.state.ShowAddedBooks});
+  }
 
 
   render() {
