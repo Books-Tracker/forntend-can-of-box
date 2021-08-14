@@ -13,14 +13,12 @@ export class MyFavoriteBooks extends React.Component {
     this.state = {
       bookData: [],
       booksStatus: false,
+      ShowAddedBooks:false,
     };
   }
 
-  componentDidMount = async () => {
-    await axios
-      .get(
-        `${process.env.REACT_APP_SERVER}/books?email=${this.props.auth0.user.email}`
-      )
+  componentDidMount = () => {
+     axios.get(`${process.env.REACT_APP_SERVER}/books?email=${this.props.auth0.user.email}`)
 
       .then((axiosResponse) => {
         // console.log(axiosResponse.data);
@@ -34,6 +32,10 @@ export class MyFavoriteBooks extends React.Component {
         alert(error.message);
       });
   };
+
+  handeladdedBooks = () => {
+    this.setState({handeladdedBooks: !this.state.ShowAddedBooks});
+  }
 
 
   render() {
