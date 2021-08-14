@@ -17,11 +17,8 @@ export class MyFavoriteBooks extends React.Component {
     };
   }
 
-  componentDidMount = async () => {
-    await axios
-      .get(
-        `${process.env.REACT_APP_SERVER}/books?email=${this.props.auth0.user.email}`
-      )
+  componentDidMount = () => {
+     axios.get(`${process.env.REACT_APP_SERVER}/books?email=${this.props.auth0.user.email}`)
 
       .then((axiosResponse) => {
         // console.log(axiosResponse.data);
